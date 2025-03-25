@@ -1,0 +1,207 @@
+.admin-page {
+  min-height: 100vh;
+  background: #1a1a1a;
+  background-image: 
+    radial-gradient(circle at 25px 25px, rgba(255, 99, 71, 0.15) 2%, transparent 0%),
+    radial-gradient(circle at 75px 75px, rgba(255, 99, 71, 0.15) 2%, transparent 0%);
+  background-size: 100px 100px;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.admin-container {
+  background: rgba(255, 99, 71, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 99, 71, 0.1);
+  border-radius: 12px;
+  padding: 24px !important;
+  animation: fadeIn 0.5s ease-out;
+  max-width: 360px !important;
+}
+
+.admin-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.admin-shield-icon {
+  font-size: 36px !important;
+  color: #ff6347;
+  margin-bottom: 12px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.admin-title {
+  color: white !important;
+  font-weight: 700 !important;
+  margin-bottom: 4px !important;
+  letter-spacing: 1px !important;
+  font-size: 1.5rem !important;
+}
+
+.admin-subtitle {
+  color: rgba(255, 255, 255, 0.7) !important;
+  font-size: 0.875rem !important;
+}
+
+.admin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.admin-input {
+  background: white;
+  border-radius: 8px !important;
+}
+
+.admin-input .MuiOutlinedInput-root {
+  color: black;
+}
+
+.admin-input .MuiOutlinedInput-notchedOutline {
+  border-color: rgba(255, 99, 71, 0.2);
+}
+
+.admin-input:hover .MuiOutlinedInput-notchedOutline {
+  border-color: rgba(255, 99, 71, 0.3);
+}
+
+.admin-input.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: #ff6347;
+}
+
+.admin-input .MuiInputLabel-root {
+  color: rgba(253, 106, 66, 0.9);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.admin-input .MuiInputLabel-root.Mui-focused {
+  color: rgba(253, 106, 66, 1);
+  font-weight: 700;
+}
+
+.input-icon {
+  color: rgba(253, 106, 66, 0.9);
+  font-size: 20px !important;
+}
+
+.admin-input .MuiIconButton-root {
+  color: rgba(253, 106, 66, 0.9);
+}
+
+.admin-options {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -8px;
+}
+
+.forgot-password {
+  color: #ff6347 !important;
+  text-decoration: none !important;
+  font-size: 0.75rem !important;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.forgot-password:hover {
+  opacity: 1;
+}
+
+.admin-button {
+  background: linear-gradient(135deg, #ff6347, #ff7f50) !important;
+  color: white !important;
+  padding: 10px !important;
+  font-size: 0.875rem !important;
+  font-weight: 600 !important;
+  text-transform: none !important;
+  border-radius: 6px !important;
+  transition: all 0.3s ease !important;
+}
+
+.admin-button:hover {
+  background: linear-gradient(135deg, #ff7f50, #ff8c69) !important;
+}
+
+.admin-button:disabled {
+  background: rgba(255, 99, 71, 0.5) !important;
+}
+
+.back-button {
+  color: rgba(255, 255, 255, 0.7) !important;
+  text-transform: none !important;
+  font-size: 0.75rem !important;
+  padding: 6px 12px !important;
+}
+
+.back-button:hover {
+  background: rgba(255, 99, 71, 0.1) !important;
+}
+
+.security-notice {
+  margin-top: 20px;
+  text-align: center;
+  padding: 12px;
+  background: rgba(255, 99, 71, 0.05);
+  border-radius: 6px;
+  border: 1px solid rgba(255, 99, 71, 0.1);
+}
+
+.security-text {
+  color: rgba(255, 255, 255, 0.5) !important;
+  font-size: 0.75rem !important;
+}
+
+.admin-error {
+  background: rgba(255, 99, 71, 0.1) !important;
+  color: #ff6347 !important;
+  border: 1px solid rgba(255, 99, 71, 0.2);
+  font-size: 0.75rem !important;
+  padding: 8px 12px !important;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .admin-page {
+    padding: 16px;
+  }
+
+  .admin-container {
+    padding: 20px !important;
+  }
+
+  .admin-title {
+    font-size: 1.25rem !important;
+  }
+
+  .admin-shield-icon {
+    font-size: 32px !important;
+  }
+}

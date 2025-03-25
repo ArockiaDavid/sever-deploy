@@ -1,0 +1,34 @@
+# Backend Dockerfile
+FROM node:18
+
+# Set working directory
+WORKDIR /app
+
+# Configure npm to skip SSL certificate validation
+ENV NODE_TLS_REJECT_UNAUTHORIZED=0
+ENV NODE_ENV=production
+
+# Install CA certificates and build tools
+RUN apt-get update && apt-get install -y ca-certificates build-essential python3 && update-ca-certificates
+
+# Copy package files first for better caching
+COPY backend/package*.json ./backend/
+
+# Install backend dependencies
+WORKDIR /app/backend
+# Configure npm to skip SSL validation
+RUN npm config set strict-ssl false && \
+    # First install bcryptjs explicitly
+    npm install bcryptjs --no-package-lock && \
+    # Then install remaining dependencies with more verbose output
+    npm install --omit=optional --no-package-lock --verbose
+
+# Copy the rest of the backend files
+COPY backend ./
+COPY .env /app/.env
+
+# Expose port for backend
+EXPOSE 3007
+
+# Start backend server
+CMD ["node", "server.js"]

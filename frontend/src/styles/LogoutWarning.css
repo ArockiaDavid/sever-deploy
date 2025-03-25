@@ -1,0 +1,31 @@
+.logout-warning-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--warning-color);
+}
+
+.logout-warning-timer {
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+
+.logout-warning-countdown {
+  margin-bottom: 16px;
+  text-align: center;
+  color: var(--warning-color);
+}
+
+.logout-warning-progress {
+  height: 8px;
+  border-radius: 4px;
+}
+
+.logout-warning-actions {
+  padding: 0 24px 16px 24px;
+}
+
+/* CSS Variables for theme colors - these will be set by Material-UI theme */
+:root {
+  --warning-color: #ed6c02; /* Material-UI warning color */
+}

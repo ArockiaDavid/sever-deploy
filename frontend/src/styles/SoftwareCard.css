@@ -1,0 +1,247 @@
+.software-card {
+  position: relative;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: linear-gradient(to bottom right, #ffffff, #fafafa);
+}
+
+.software-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
+  border-color: rgba(0, 0, 0, 0.12);
+}
+
+.software-card.expanded {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12) !important;
+}
+
+.software-card-content {
+  padding: 16px !important;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.software-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.software-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.software-icon .MuiSvgIcon-root {
+  font-size: 24px;
+  transition: all 0.3s ease;
+}
+
+.app-icon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.software-info {
+  flex-grow: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.software-name {
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  margin: 0 !important;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.software-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.software-version {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 0.75rem;
+}
+
+.software-status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+}
+
+.status-icon {
+  font-size: 20px !important;
+  transition: all 0.3s ease;
+}
+
+.status-icon.installed {
+  color: #4caf50;
+}
+
+.status-icon.not-installed {
+  color: rgba(0, 0, 0, 0.38);
+}
+
+.status-indicator {
+  color: inherit;
+}
+
+.software-details {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-top: 8px;
+}
+
+.software-description {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.status-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px;
+  background-color: rgba(0, 0, 0, 0.02);
+  border-radius: 8px;
+}
+
+.error-message {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #d32f2f;
+  padding: 4px 8px;
+  background-color: rgba(211, 47, 47, 0.08);
+  border-radius: 4px;
+}
+
+.error-message .MuiTypography-caption {
+  flex-grow: 1;
+  font-size: 0.75rem;
+}
+
+.progress-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.progress-bar {
+  height: 4px !important;
+  border-radius: 2px;
+}
+
+.status-text {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 0.75rem;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  padding-top: 8px;
+}
+
+.action-buttons .MuiButton-root {
+  min-width: 120px;
+}
+
+.action-buttons .MuiCircularProgress-root {
+  color: inherit;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .software-header {
+    gap: 12px;
+  }
+
+  .software-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .software-icon .MuiSvgIcon-root {
+    font-size: 20px;
+  }
+
+  .app-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .software-name {
+    font-size: 0.875rem !important;
+  }
+
+  .software-meta {
+    gap: 6px;
+  }
+
+  .software-status {
+    width: 28px;
+    height: 28px;
+  }
+
+  .status-icon {
+    font-size: 18px !important;
+  }
+
+  .action-buttons .MuiButton-root {
+    min-width: 100px;
+    font-size: 0.75rem;
+  }
+}
+
+/* Animation for expanded state */
+.MuiCollapse-root {
+  transition: height 300ms cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Custom scrollbar for description */
+.software-description::-webkit-scrollbar {
+  width: 4px;
+}
+
+.software-description::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 2px;
+}
+
+.software-description::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+}
+
+.software-description::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.3);
+}

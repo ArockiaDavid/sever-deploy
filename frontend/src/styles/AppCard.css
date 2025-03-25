@@ -1,0 +1,250 @@
+/* Simple App Card Styles */
+.simple-app-card {
+  position: relative;
+  border-radius: 12px !important;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  border: none !important;
+  min-height: 280px;
+}
+
+.simple-app-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15) !important;
+}
+
+.simple-app-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: linear-gradient(135deg, #fd6a42, #ff8f00);
+  z-index: 0;
+  opacity: 0.9;
+}
+
+.simple-card-content {
+  padding: 16px !important;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+/* Header section with icon, name, version and date */
+.simple-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.simple-card-title-section {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-width: 70%;
+}
+
+.simple-icon-name-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.simple-app-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  color: #fd6a42;
+  padding: 0;
+  overflow: hidden;
+}
+
+.simple-app-icon svg {
+  font-size: 18px;
+}
+
+.simple-app-name {
+  font-size: 0.95rem !important;
+  font-weight: 600 !important;
+  color: white;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 150px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.simple-version-tag {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #fd6a42;
+  background-color: #fff8e1;
+  padding: 4px 12px;
+  border-radius: 12px;
+  display: inline-block;
+  max-width: fit-content;
+  margin-top: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  letter-spacing: 0.5px;
+  position: relative;
+  z-index: 5;
+  border: 1px solid rgba(253, 106, 66, 0.3);
+}
+
+.simple-date {
+  font-size: 0.7rem !important;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: right;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* Category tag */
+.simple-category-container {
+  margin: 16px 0 8px 0;
+}
+
+.simple-category-tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.browser-tag {
+  background-color: #e3f2fd;
+  color: #1976d2;
+}
+
+.ide-tag {
+  background-color: #e8eaf6;
+  color: #3f51b5;
+}
+
+.language-tag {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.database-tag {
+  background-color: #fce4ec;
+  color: #c2185b;
+}
+
+.tool-tag {
+  background-color: #fff8e1;
+  color: #ff8f00;
+}
+
+/* Description */
+.simple-description {
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 8px;
+  margin: 10px 0 !important;
+  font-size: 0.85rem !important;
+  color: rgba(0, 0, 0, 0.7) !important;
+  line-height: 1.4 !important;
+  max-height: 60px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  border-left: 3px solid #fd6a42;
+}
+
+/* File size */
+.simple-file-size {
+  font-size: 1.2rem !important;
+  font-weight: 700 !important;
+  color: #fd6a42;
+  margin: 12px 0 !important;
+  text-align: center;
+  padding: 5px;
+  background-color: #fff8e1;
+  border-radius: 8px;
+}
+
+/* Action buttons */
+.simple-action-container {
+  margin-top: auto;
+  padding-top: 16px;
+}
+
+.simple-install-button {
+  background: linear-gradient(135deg, #fd6a42, #ff8f00) !important;
+  color: white !important;
+  border-radius: 25px !important;
+  text-transform: none !important;
+  font-weight: 600 !important;
+  padding: 8px 16px !important;
+  box-shadow: 0 4px 8px rgba(253, 106, 66, 0.3) !important;
+  font-size: 0.9rem !important;
+  letter-spacing: 0.5px !important;
+  transition: all 0.3s ease !important;
+}
+
+.simple-install-button:hover {
+  background: linear-gradient(135deg, #e55a35, #e57e00) !important;
+  box-shadow: 0 6px 12px rgba(253, 106, 66, 0.4) !important;
+  transform: translateY(-2px);
+}
+
+.simple-uninstall-button {
+  color: #f44336 !important;
+  border-color: rgba(244, 67, 54, 0.5) !important;
+  border-radius: 25px !important;
+  text-transform: none !important;
+  font-weight: 600 !important;
+  padding: 8px 16px !important;
+  font-size: 0.9rem !important;
+  letter-spacing: 0.5px !important;
+  transition: all 0.3s ease !important;
+}
+
+.simple-uninstall-button:hover {
+  background-color: rgba(244, 67, 54, 0.08) !important;
+  border-color: #f44336 !important;
+  transform: translateY(-2px);
+}
+
+/* Software-specific icon colors */
+.github-icon {
+  color: #24292e;
+}
+
+.chrome-icon {
+  color: #4285F4;
+}
+
+.vscode-icon {
+  color: #007ACC;
+}
+
+.node-icon {
+  color: #68A063;
+}
+
+.python-icon {
+  color: #3776AB;
+}
+
+.docker-icon {
+  color: #2496ED;
+}
